@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+    <meta name="keywords" content="hexo, autumn">
+    <title>
+        Walking Man&#39;s Blog
+    </title>
+    <!-- favicon -->
+    
+    <link rel="icon" href="http://osly086qe.bkt.clouddn.com/favicon.ico">
+    
+    <link rel="stylesheet" href="/clickonly.github.io/css/style.css">
+
+    <!-- highlight -->
+    <link rel="stylesheet" href="https://cdn.bootcss.com/highlight.js/9.12.0/styles/github-gist.min.css">
+    <script src="//cdn.bootcss.com/highlight.js/9.2.0/highlight.min.js"></script>
+    <script>
+        hljs.initHighlightingOnLoad()
+    </script>
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="http://osly086qe.bkt.clouddn.com/hexo-infinite-scroll-v1.0.1.min.css">
+    <script src="http://osly086qe.bkt.clouddn.com/hexo-infinite-scroll-v1.0.3.min.js"></script>
+    <script>
+        infiniteScroll()
+
+        // for mobile menu
+        $(function() {
+            $('.social-button').click(function() {
+                if ($('.social-links').hasClass('hide-links')) {
+                    $('.social-links').removeClass('hide-links')
+                } else {
+                    $('.social-links').addClass('hide-links')
+                }
+            })
+        })
+    </script>
+</head>
+
+    <body style="background: url(http://osly086qe.bkt.clouddn.com/button-bg.png) #f3f3f3">
+        <div class="container">
+            <header class="header">
+    <h1 class="title">
+        <a href="/clickonly.github.io/" class="logo">
+            Walking Man&#39;s Blog
+        </a>
+    </h1>
+    <h2 class="desc">
+        
+    </h2>
+
+    <nav class="links">
+        <button class="social-button">
+            menu
+        </button>
+        <ul class="social-links hide-links">
+            
+                <li>
+                    <a href="https://github.com/clickonly">
+                        Github
+                    </a>
+                </li>
+                
+        </ul>
+    </nav>
+</header>
+                <main class="main">
+                    <article class="post">
+    
+            <h2 class="post-title">
+                Elasticsearch
+            </h2>
+            <ul class="post-date">
+                <li>
+                    2018-06-27
+                </li>
+                <li>
+                    Pan Jin
+                </li>
+            </ul>
+            <div class="post-content">
+                <h2 id="title-Elasticsearch入门"><a href="#title-Elasticsearch入门" class="headerlink" title="title: Elasticsearch入门"></a>title: Elasticsearch入门</h2><h3 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">1.wget 官网zip包或者tar包地址</span><br><span class="line">2.解压包   upzip / tar -zxvf</span><br><span class="line">3.useradd 用户名</span><br><span class="line">4.passwd 用户名  </span><br><span class="line">5.进入es目录下 ./bin/elasticsearch 启动</span><br></pre></td></tr></table></figure>
+<h3 id="Question"><a href="#Question" class="headerlink" title="Question"></a>Question</h3><p>#####Question1<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">提示文件权限不足</span><br></pre></td></tr></table></figure></p>
+<p>#####ANSWER1<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">进入新建的用户路径，给对应用户授权之后，再启动</span><br></pre></td></tr></table></figure></p>
+<p>#####Question2<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">提示文件权限不足</span><br></pre></td></tr></table></figure></p>
+<p>#####ANSWER2<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">进入新建的用户路径，给对应用户授权之后，再启动</span><br></pre></td></tr></table></figure></p>
+<h5 id="通用语法"><a href="#通用语法" class="headerlink" title="通用语法"></a>通用语法</h5><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">curl -X&lt;VERB&gt; <span class="string">'&lt;PROTOCOL&gt;://&lt;HOST&gt;/&lt;PATH&gt;?&lt;QUERY_STRING&gt;'</span> -d <span class="string">'&lt;BODY&gt;'</span></span><br><span class="line">     VERB：HTTP协议的请求方法，常用的有GET、POST、PUT、HEAD以及DELETE；</span><br><span class="line">     PROTOCOL：协议类型，http或https；</span><br><span class="line">     HOST：ES集群中的任一主机的主机名；</span><br><span class="line">     PORT：ES服务监听的端口，默认为9200；</span><br><span class="line">     QUERY_STRING：查询参数，例如?pretty表示使用易读的JSON格式输出；</span><br><span class="line">     BODY：JSON格式的请求主体；</span><br></pre></td></tr></table></figure>
+<h5 id="基本操作"><a href="#基本操作" class="headerlink" title="基本操作"></a>基本操作</h5><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">curl -X PUT <span class="string">'HTTP://192.168.0.136:9200/jinpan?pretty'</span> 增</span><br><span class="line">curl -X DELETE <span class="string">'HTTP://192.168.0.136:9200/jinpan?pretty'</span> 删</span><br><span class="line">curl -X GET <span class="string">'HTTP://192.168.0.136:9200/jinpan?pretty'</span> 查</span><br></pre></td></tr></table></figure>
+<pre><code>单个 Elasti
+</code></pre>
+            </div>
+</article>
+                </main>
+                <aside class="aside">
+                    <section class="aside-section">
+                        
+    <h1>Categories</h1>
+
+    
+
+                    </section>
+                    <section class="aside-section">
+                        
+    <h1>Archives</h1>
+
+    <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/clickonly.github.io/archives/2018/">2018 . 06</a></li></ul>
+
+                    </section>
+                    <section class="aside-section tag">
+                        
+    <h1>Tags</h1>
+
+    <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/clickonly.github.io/tags/Technology/">Technology</a></li></ul>
+
+                    </section>
+                </aside>
+        </div>
+    </body>
+
+</html>
