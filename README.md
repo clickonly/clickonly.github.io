@@ -1,1 +1,1 @@
-# clickonly.github.io
+https://clickonly.github.io/
